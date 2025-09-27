@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Entry Data Siswa • SMKN 1 Purbalingga</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="page">
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo">SMKN1</div>
+        <div class="title">
+          <h1>Entry Data Siswa</h1>
+          <p class="subtitle">SMKN 1 Purbalingga — Form pendaftaran & data</p>
+        </div>
+      </div>
+    </header>
+
+    <section class="card">
+      <form id="studentForm" class="form" autocomplete="off" novalidate>
+        <h2 class="card-title">Form Data Siswa</h2>
+
+        <div class="row">
+          <div class="col">
+            <label>Nama Lengkap <span class="req">*</span></label>
+            <input type="text" name="nama" required />
+          </div>
+          <div class="col">
+            <label>NISN <span class="req">*</span></label>
+            <input type="text" name="nisn" inputmode="numeric" pattern="\d*" maxlength="12" required />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>NIK</label>
+            <input type="text" name="nik" inputmode="numeric" maxlength="20" />
+          </div>
+          <div class="col">
+            <label>Jenis Kelamin</label>
+            <select name="jk">
+              <option value="">Pilih</option>
+              <option value="Laki-laki">Laki-laki</option>
+              <option value="Perempuan">Perempuan</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Tempat Lahir</label>
+            <input type="text" name="tempat_lahir" />
+          </div>
+          <div class="col">
+            <label>Tanggal Lahir</label>
+            <input type="date" name="tanggal_lahir" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Kelas <span class="req">*</span></label>
+            <input type="text" name="kelas" required placeholder="Contoh: XI TKJ 1" />
+          </div>
+          <div class="col">
+            <label>Jurusan <span class="req">*</span></label>
+            <input type="text" name="jurusan" required placeholder="Contoh: Teknik Komputer dan Jaringan" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Alamat</label>
+            <input type="text" name="alamat" />
+          </div>
+          <div class="col">
+            <label>Nomor HP</label>
+            <input type="tel" name="hp" inputmode="tel" placeholder="08xxxx" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <label>Email</label>
+            <input type="email" name="email" />
+          </div>
+          <div class="col">
+            <label>Tahun Masuk</label>
+            <input type="number" name="tahun_masuk" min="2000" max="2100" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn-primary">Kirim Data</button>
+          <button type="reset" class="btn-secondary">Reset</button>
+        </div>
+
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+      </form>
+    </section>
+
+    <footer class="foot">
+      <small>SMKN 1 Purbalingga • Form sederhana & aman</small>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
